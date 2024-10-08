@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Header from './components/Header'; 
 import Main from './components/Main'; 
 import CarrouselResultados from './components/CarrouselResultados';
+import Footer from './components/Footer';
 
 const App: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ const App: React.FC = () => {
       />
       <Main />
       <CarrouselResultados />
+      <Footer />
     </div>
   );
 };

@@ -7,30 +7,26 @@ const CarrouselResultados: React.FC = () => {
   
   const imagenesResultados = [
     {
-      src: "https://via.placeholder.com/400x300?text=Socio+1",
+      src: "https://res.cloudinary.com/dzzec7hzl/image/upload/v1728423411/WhatsApp_Image_2024-10-08_at_6.36.02_PM_q5dgrf.jpg",
       alt: "Resultado Socio 1",
-      nombre: "Socio 1",
+      
     },
     {
-      src: "https://via.placeholder.com/400x300?text=Socio+2",
+      src: "https://res.cloudinary.com/dzzec7hzl/image/upload/v1728423413/WhatsApp_Image_2024-10-08_at_6.36.01_PM_zydg0o.jpg",
       alt: "Resultado Socio 2",
-      nombre: "Socio 2",
+      
     },
     {
       src: "https://via.placeholder.com/400x300?text=Socio+3",
       alt: "Resultado Socio 3",
-      nombre: "Socio 3",
+      
     },
-    {
-      src: "https://via.placeholder.com/400x300?text=Socio+4",
-      alt: "Resultado Socio 4",
-      nombre: "Socio 4",
-    },
+    
   ];
 
-  // Configuraciones del carrusel
+  
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -50,9 +46,9 @@ const CarrouselResultados: React.FC = () => {
             <img 
               src={imagen.src} 
               alt={imagen.alt} 
-              className="rounded-lg shadow-lg w-full h-auto"
+              className="rounded-lg shadow-lg w-full h-90 object-cover"
             />
-            <p className="text-center mt-4 font-semibold">{imagen.nombre}</p>
+            
           </div>
         ))}
       </Slider>
