@@ -3,6 +3,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Header from './components/Header'; 
 import Main from './components/Main'; 
+import CarrouselResultados from './components/CarrouselResultados';
 
 const App: React.FC = () => {
   return (
@@ -13,6 +14,7 @@ const App: React.FC = () => {
         altText="Descripción de la imagen del banner"
       />
       <Main />
+      <CarrouselResultados />
     </div>
   );
 };

@@ -14,7 +14,7 @@ const Header: React.FC<HeaderProps> = ({ bannerImage, altText = 'Banner' }) => {
         <img 
           src={bannerImage} 
           alt={altText} 
-          className="w-full h-auto object-cover"
+          className="w-full h-90 object-cover"
         />
       </div>
     </header>
