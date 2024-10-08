@@ -17,7 +17,7 @@ const CarrouselResultados: React.FC = () => {
       
     },
     {
-      src: "https://via.placeholder.com/400x300?text=Socio+3",
+      src: "",
       alt: "Resultado Socio 3",
       
     },
