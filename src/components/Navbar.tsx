@@ -8,7 +8,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full  bg-black text-white flex justify-between items-center z-20"> 
+    <nav className="sticky top-0 left-0 w-full  bg-black text-white p-2 flex justify-between items-center z-20"> 
       <div className="logo flex items-center">
         <img 
             src="https://res.cloudinary.com/dzzec7hzl/image/upload/v1728408679/Modern_Black_Beige_Initial_Fashion_Logo_mhuntu.png" 
