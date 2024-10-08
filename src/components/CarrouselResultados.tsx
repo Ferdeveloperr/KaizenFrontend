@@ -16,11 +16,7 @@ const CarrouselResultados: React.FC = () => {
       alt: "Resultado Socio 2",
       
     },
-    {
-      src: "",
-      alt: "Resultado Socio 3",
-      
-    },
+   
     
   ];
 

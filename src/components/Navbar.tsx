@@ -8,7 +8,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="sticky top-0 left-0 w-full bg-black text-white  flex justify-between items-center z-20">
+    <nav className="sticky top-0 left-0 w-full bg-black text-white flex justify-between items-center z-50 shadow-md">
       <div className="logo flex items-center">
         <img
           src="https://res.cloudinary.com/dzzec7hzl/image/upload/v1728421136/Modern_Black_Beige_Initial_Fashion_Logo_3_uxhhqo.png"
@@ -44,7 +44,7 @@ const Navbar: React.FC = () => {
 
       
       <div
-        className={`absolute top-16 left-0 w-full bg-black text-center space-y-4 z-10 overflow-hidden transition-all duration-500 ease-in-out
+        className={`absolute top-16 left-0 w-full bg-black text-center space-y-4 z-40 overflow-hidden transition-all duration-500 ease-in-out
         ${isOpen ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0'}`}
       >
         <ul className="space-y-4">

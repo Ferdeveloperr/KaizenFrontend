@@ -17,12 +17,12 @@ const Main: React.FC = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         
         {/* Tarjeta para el Plan Activo */}
-        <div className="bg-white shadow-md rounded-lg p-4">
-          <h3 className="text-xl font-semibold mb-2">Plan Activo</h3>
-          <p className="text-black mb-4">
+        <div className="bg-white shadow-md rounded-lg p-6 flex flex-col items-center">
+          <h3 className="text-xl font-semibold mb-2 text-center">Plan Activo</h3>
+          <p className="text-black mb-4 text-center">
             Ideal para quienes buscan comenzar con un entrenamiento estructurado y eficaz.
           </p>
-          <ul className={`list-disc list-inside mb-4 text-black ${expanded.activo ? '' : 'hidden'}`}>
+          <ul className={`list-disc list-inside mb-4 text-black text-center ${expanded.activo ? '' : 'hidden'}`}>
             <li>Rutinas de entrenamiento personalizadas entregadas cada mes.</li>
             <li>Consultas vía WhatsApp: resolución de dudas con el entrenador, disponible de lunes a viernes.</li>
             <li>Plan de alimentación básico para complementar tus entrenamientos.</li>
@@ -33,19 +33,18 @@ const Main: React.FC = () => {
           </button>
           <div>
             <button className="bg-red-600 text-white py-2 px-4 rounded mb-2">
-                Voy a empezar!
+              Voy a empezar!
             </button>
-        </div>
+          </div>
         </div>
        
-
         {/* Tarjeta para el Plan Plus */}
-        <div className="bg-white shadow-md rounded-lg p-4">
-          <h3 className="text-xl font-semibold mb-2">Plan Plus</h3>
-          <p className="text-black mb-4">
+        <div className="bg-white shadow-md rounded-lg p-6 flex flex-col items-center">
+          <h3 className="text-xl font-semibold mb-2 text-center">Plan Plus</h3>
+          <p className="text-black mb-4 text-center">
             Perfecto para quienes desean un nivel adicional de personalización y seguimiento.
           </p>
-          <ul className={`list-disc list-inside mb-4 text-black ${expanded.plus ? '' : 'hidden'}`}>
+          <ul className={`list-disc list-inside mb-4 text-black text-center ${expanded.plus ? '' : 'hidden'}`}>
             <li>Rutinas de entrenamiento avanzadas actualizadas cada dos semanas, ajustadas a tu progreso.</li>
             <li>Seguimiento de la rutina mediante sesiones grupales por Google Meet cada mes.</li>
             <li>Consultas ilimitadas por WhatsApp: soporte directo con el entrenador, de lunes a viernes.</li>
@@ -56,21 +55,20 @@ const Main: React.FC = () => {
           <button className="text-red-600 mb-4" onClick={() => toggleExpand('plus')}>
             {expanded.plus ? 'Ver menos' : 'Ver beneficios'}
           </button>
-            <div>
-                <button className="bg-red-600 text-white py-2 px-4 rounded mb-2">
-                    Es para mi!
-                </button>
-            </div>
+          <div>
+            <button className="bg-red-600 text-white py-2 px-4 rounded mb-2">
+              Es para mí!
+            </button>
+          </div>
         </div>
        
-
         {/* Tarjeta para el Plan Pro */}
-        <div className="bg-white shadow-md rounded-lg p-4">
-          <h3 className="text-xl font-semibold mb-2">Plan Pro</h3>
-          <p className="text-black mb-4">
+        <div className="bg-white shadow-md rounded-lg p-6 flex flex-col items-center">
+          <h3 className="text-xl font-semibold mb-2 text-center">Plan Pro</h3>
+          <p className="text-black mb-4 text-center">
             Para quienes buscan un entrenamiento de nivel profesional con el máximo de beneficios.
           </p>
-          <ul className={`list-disc list-inside mb-4 text-black ${expanded.pro ? '' : 'hidden'}`}>
+          <ul className={`list-disc list-inside mb-4 text-black text-center ${expanded.pro ? '' : 'hidden'}`}>
             <li>Rutinas personalizadas semanales, ajustadas continuamente a tus necesidades y progreso.</li>
             <li>Seguimiento intensivo con sesiones 1 a 1 por Google Meet cada semana para evaluar tu progreso.</li>
             <li>Consultas ilimitadas por WhatsApp con respuestas prioritarias y asistencia continua.</li>
@@ -82,11 +80,11 @@ const Main: React.FC = () => {
           <button className="text-red-600 mb-4" onClick={() => toggleExpand('pro')}>
             {expanded.pro ? 'Ver menos' : 'Ver beneficios'}
           </button>
-            <div>
-                <button className="bg-red-600 text-white py-2 px-4 rounded mb-2">
-                    Lo quiero!
-                </button>
-            </div>
+          <div>
+            <button className="bg-red-600 text-white py-2 px-4 rounded mb-2">
+              Lo quiero!
+            </button>
+          </div>
         </div>
         
       </div>

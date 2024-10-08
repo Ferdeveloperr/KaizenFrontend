@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Main from './components/Main'; 
 import CarrouselResultados from './components/CarrouselResultados';
 import Footer from './components/Footer';
+import Faq from './components/Faq';
 
 const App: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ const App: React.FC = () => {
         altText="Descripción de la imagen del banner"
       />
       <Main />
+      <Faq />
       <CarrouselResultados />
       <Footer />
     </div>
