@@ -52,7 +52,7 @@ const FormContact: React.FC = () => {
             id="email"
             name="email" 
             required
-            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 transition duration-300 transform hover:border-red-400"
+            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 transition duration-300 transform hover:border-red-400" 
             placeholder="tuemail@ejemplo.com"
           />
         </div>
