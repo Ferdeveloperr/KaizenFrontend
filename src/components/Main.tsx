@@ -11,6 +11,12 @@ const Main: React.FC = () => {
     setExpanded((prev) => ({ ...prev, [plan]: !prev[plan] }));
   };
 
+  const openWhatsApp = (message: string) => {
+    const encodedMessage = encodeURIComponent(message);
+    const url = `https://api.whatsapp.com/send?text=${encodedMessage}`;
+    window.open(url, '_blank');
+  };
+
   return (
     <main className="p-6 font-roboto">
       <h2 className="text-2xl font-bold mb-4 text-center">Nuestros Servicios</h2>
@@ -32,7 +38,10 @@ const Main: React.FC = () => {
             {expanded.activo ? 'Ver menos' : 'Ver beneficios'}
           </button>
           <div>
-            <button className="bg-red-600 text-white py-2 px-4 rounded mb-2">
+            <button
+              className="bg-red-600 text-white py-2 px-4 rounded mb-2"
+              onClick={() => openWhatsApp("Hola, quiero solicitar el plan Activo y tener más información de cómo empezar!")}
+            >
               Voy a empezar!
             </button>
           </div>
@@ -56,7 +65,10 @@ const Main: React.FC = () => {
             {expanded.plus ? 'Ver menos' : 'Ver beneficios'}
           </button>
           <div>
-            <button className="bg-red-600 text-white py-2 px-4 rounded mb-2">
+            <button
+              className="bg-red-600 text-white py-2 px-4 rounded mb-2"
+              onClick={() => openWhatsApp("Hola, quiero solicitar el plan Plus y tener más información de cómo empezar!")}
+            >
               Es para mí!
             </button>
           </div>
@@ -81,7 +93,10 @@ const Main: React.FC = () => {
             {expanded.pro ? 'Ver menos' : 'Ver beneficios'}
           </button>
           <div>
-            <button className="bg-red-600 text-white py-2 px-4 rounded mb-2">
+            <button
+              className="bg-red-600 text-white py-2 px-4 rounded mb-2"
+              onClick={() => openWhatsApp("Hola, quiero solicitar el plan Pro y tener más información de cómo empezar!")}
+            >
               Lo quiero!
             </button>
           </div>
