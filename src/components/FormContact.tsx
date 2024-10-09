@@ -3,18 +3,19 @@ import emailjs from 'emailjs-com';
 import Swal from 'sweetalert2';
 
 const FormContact: React.FC = () => {
-  const form = useRef<HTMLFormElement>(null);
+  
+  const form = useRef<HTMLFormElement | null>(null);
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-   
+    
     if (form.current) {
       emailjs.sendForm(
-        'service_03b1l1k',     
-        'template_hvjahtl',     
-        form.current,            
-        'yyQtjOBFcG__WMWY6'      
+        'service_03b1l1k',
+        'template_hvjahtl',
+        form.current,
+        'yyQtjOBFcG__WMWY6'
       )
       .then(() => {
         Swal.fire({
@@ -25,8 +26,7 @@ const FormContact: React.FC = () => {
           showCloseButton: true,
           timer: 3000,
         });
-        form.current.reset();
-         
+        form.current!.reset(); 
       })
       .catch((error) => {
         Swal.fire({
@@ -38,6 +38,8 @@ const FormContact: React.FC = () => {
         });
         console.error('EmailJS error:', error);
       });
+    } else {
+      console.error('Form is not defined');
     }
   };
 
@@ -50,9 +52,9 @@ const FormContact: React.FC = () => {
           <input
             type="email"
             id="email"
-            name="email" 
+            name="email"
             required
-            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 transition duration-300 transform hover:border-red-400" 
+            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 transition duration-300 transform hover:border-red-400"
             placeholder="tuemail@ejemplo.com"
           />
         </div>
@@ -61,14 +63,14 @@ const FormContact: React.FC = () => {
           <input
             type="text"
             id="nombre"
-            name="from_name" 
+            name="from_name"
             required
             className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 transition duration-300 transform hover:border-red-400"
             placeholder="Tu nombre"
           />
         </div>
         <div>
-          <label htmlFor="opcion" className="block text-gray-700 font-semibold mb-1">Selecciona una opción</label>
+          <label htmlFor="opcion" className="block text-gray-700 font-semibold mb-1"> Hace cuanto entrenas?</label>
           <div className="relative">
             <select
               id="opcion"
@@ -76,10 +78,10 @@ const FormContact: React.FC = () => {
               required
               className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 transition duration-300 transform hover:border-red-400 appearance-none bg-white"
             >
-              <option value="" disabled selected className="text-gray-400">Elige una opción</option>
-              <option value="Opción 1">Opción 1</option>
-              <option value="Opción 2">Opción 2</option>
-              <option value="Opción 3">Opción 3</option>
+              <option value="" disabled selected className="text-gray-400">Selecciona una opción</option>
+              <option value="Opción 1">Quiero arrancar de 0</option>
+              <option value="Opción 2">Ya tengo algo de experiencia</option>
+              <option value="Opción 3">Hace varios años</option>
             </select>
             <div className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
               <svg className="w-5 h-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -111,3 +113,4 @@ const FormContact: React.FC = () => {
 };
 
 export default FormContact;
+
