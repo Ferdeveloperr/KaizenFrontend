@@ -23,7 +23,7 @@ const Header: React.FC<HeaderProps> = ({ bannerImage, altText = 'Banner' }) => {
           href={whatsappLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-black text-white  px-4 py-2 rounded-lg text-lg font-semibold transition-transform transform hover:scale-105 hover:bg-red-600 hover:text-white duration-300
+          className="bg-red-700 text-white  px-4 py-2 rounded-lg text-lg font-semibold transition-transform transform hover:scale-105 hover:bg-red-600 hover:text-white duration-300
                      md:px-6 md:py-3 md:text-base sm:px-4 sm:py-2 sm:text-sm"
         >
           ¡Entrenemos!

@@ -78,10 +78,9 @@ const FormContact: React.FC = () => {
               required
               className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 transition duration-300 transform hover:border-red-400 appearance-none bg-white"
             >
-              <option value="" disabled selected className="text-gray-400">Selecciona una opción</option>
-              <option value="Opción 1">Quiero arrancar de 0</option>
-              <option value="Opción 2">Ya tengo algo de experiencia</option>
-              <option value="Opción 3">Hace varios años</option>
+              <option value="Arranca de 0">Quiero arrancar de 0</option>
+              <option value="Algo de experiencia">Ya tengo algo de experiencia</option>
+              <option value="Hace varios años">Hace varios años</option>
             </select>
             <div className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
               <svg className="w-5 h-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
