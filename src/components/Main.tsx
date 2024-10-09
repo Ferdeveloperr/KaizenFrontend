@@ -13,7 +13,8 @@ const Main: React.FC = () => {
 
   const openWhatsApp = (message: string) => {
     const encodedMessage = encodeURIComponent(message);
-    const url = `https://api.whatsapp.com/send?text=${encodedMessage}`;
+    const phoneNumber = '5491126629808'; 
+    const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
     window.open(url, '_blank');
   };
 
@@ -22,7 +23,7 @@ const Main: React.FC = () => {
       <h2 className="text-2xl font-bold mb-4 text-center">Nuestros Servicios</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         
-        {/* Tarjeta para el Plan Activo */}
+        
         <div className="bg-white shadow-md rounded-lg p-6 flex flex-col items-center">
           <h3 className="text-xl font-semibold mb-2 text-center">Plan Activo</h3>
           <p className="text-black mb-4 text-center">
@@ -47,7 +48,7 @@ const Main: React.FC = () => {
           </div>
         </div>
        
-        {/* Tarjeta para el Plan Plus */}
+
         <div className="bg-white shadow-md rounded-lg p-6 flex flex-col items-center">
           <h3 className="text-xl font-semibold mb-2 text-center">Plan Plus</h3>
           <p className="text-black mb-4 text-center">
@@ -74,7 +75,7 @@ const Main: React.FC = () => {
           </div>
         </div>
        
-        {/* Tarjeta para el Plan Pro */}
+       
         <div className="bg-white shadow-md rounded-lg p-6 flex flex-col items-center">
           <h3 className="text-xl font-semibold mb-2 text-center">Plan Pro</h3>
           <p className="text-black mb-4 text-center">
