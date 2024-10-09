@@ -12,7 +12,7 @@ const Main: React.FC = () => {
   };
 
   return (
-    <main className="p-6">
+    <main className="p-6 font-roboto">
       <h2 className="text-2xl font-bold mb-4 text-center">Nuestros Servicios</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         

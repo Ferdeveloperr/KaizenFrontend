@@ -6,6 +6,7 @@ import Main from './components/Main';
 import CarrouselResultados from './components/CarrouselResultados';
 import Footer from './components/Footer';
 import Faq from './components/Faq';
+import FormContact from './components/FormContact';
 
 const App: React.FC = () => {
   return (
@@ -18,6 +19,7 @@ const App: React.FC = () => {
       <Main />
       <Faq />
       <CarrouselResultados />
+      <FormContact/>
       <Footer />
     </div>
   );
