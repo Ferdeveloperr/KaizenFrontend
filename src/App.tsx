@@ -7,6 +7,7 @@ import CarrouselResultados from './components/CarrouselResultados';
 import Footer from './components/Footer';
 import Faq from './components/Faq';
 import FormContact from './components/FormContact';
+import Information from './components/Information';
 
 const App: React.FC = () => {
   return (
@@ -16,6 +17,7 @@ const App: React.FC = () => {
         bannerImage="https://res.cloudinary.com/dzzec7hzl/image/upload/v1728406138/Portada_mvp_pro_fpq1ul.png"
         altText="Descripción de la imagen del banner"
       />
+      <Information/>
       <Main />
       <Faq />
       <CarrouselResultados />
