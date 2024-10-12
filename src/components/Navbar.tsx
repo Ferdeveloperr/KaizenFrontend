@@ -1,6 +1,15 @@
 import React, { useState, useEffect } from 'react';
 
-const Navbar: React.FC = () => {
+
+interface NavbarProps {
+  infoRef: React.RefObject<HTMLDivElement>;
+  mainRef: React.RefObject<HTMLDivElement>;
+  faqRef: React.RefObject<HTMLDivElement>;
+  carrouselRef: React.RefObject<HTMLDivElement>;
+  formContactRef: React.RefObject<HTMLDivElement>;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ infoRef, mainRef,  formContactRef }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -23,6 +32,10 @@ const Navbar: React.FC = () => {
     };
   }, []);
 
+  const scrollToRef = (ref: React.RefObject<HTMLDivElement>) => {
+    ref.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <nav className={`sticky top-0 left-0 w-full flex justify-between items-center z-50 shadow-md font-nunito transition-all duration-300 ${isScrolled ? 'bg-black bg-opacity-70' : 'bg-black bg-opacity-100'}`}>
       <div className="logo flex items-center">
@@ -35,16 +48,16 @@ const Navbar: React.FC = () => {
 
       <ul className="hidden md:flex list-none p-0 space-x-6 px-6">
         <li>
-          <a href="#" className="text-white no-underline hover:text-red-600 transition duration-300">Inicio</a>
+          <button onClick={() => scrollToRef(infoRef)} className="text-white no-underline hover:text-red-600 transition duration-300">Inicio</button>
         </li>
         <li>
-          <a href="#" className="text-white no-underline hover:text-red-600 transition duration-300">Acerca</a>
+          <button onClick={() => scrollToRef(infoRef)} className="text-white no-underline hover:text-red-600 transition duration-300">Como trabajamos</button>
         </li>
         <li>
-          <a href="#" className="text-white no-underline hover:text-red-600 transition duration-300">Servicios</a>
+          <button onClick={() => scrollToRef(mainRef)} className="text-white no-underline hover:text-red-600 transition duration-300">Servicios</button>
         </li>
         <li>
-          <a href="#" className="text-white no-underline hover:text-red-600 transition duration-300">Contacto</a>
+          <button onClick={() => scrollToRef(formContactRef)} className="text-white no-underline hover:text-red-600 transition duration-300">Contacto</button>
         </li>
       </ul>
 
@@ -56,22 +69,19 @@ const Navbar: React.FC = () => {
         </button>
       </div>
 
-      <div
-        className={`absolute top-16 left-0 w-full bg-black text-center space-y-4 z-40 overflow-hidden transition-all duration-500 ease-in-out
-        ${isOpen ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0'}`}
-      >
+      <div className={`absolute top-16 left-0 w-full bg-black text-center space-y-4 z-40 overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0'}`}>
         <ul className="space-y-4">
           <li>
-            <a href="#" className="text-white no-underline hover:text-red-600 transition duration-300 block py-2">Inicio</a>
+            <button onClick={() => scrollToRef(infoRef)} className="text-white no-underline hover:text-red-600 transition duration-300 block py-2">Inicio</button>
           </li>
           <li>
-            <a href="#" className="text-white no-underline hover:text-red-600 transition duration-300 block py-2">Acerca</a>
+            <button onClick={() => scrollToRef(infoRef)} className="text-white no-underline hover:text-red-600 transition duration-300 block py-2">Como trabajamos</button>
           </li>
           <li>
-            <a href="#" className="text-white no-underline hover:text-red-600 transition duration-300 block py-2">Servicios</a>
+            <button onClick={() => scrollToRef(mainRef)} className="text-white no-underline hover:text-red-600 transition duration-300 block py-2">Servicios</button>
           </li>
           <li>
-            <a href="#" className="text-white no-underline hover:text-red-600 transition duration-300 block py-2">Contacto</a>
+            <button onClick={() => scrollToRef(formContactRef)} className="text-white no-underline hover:text-red-600 transition duration-300 block py-2">Contacto</button>
           </li>
         </ul>
       </div>

@@ -3,6 +3,7 @@ import React from 'react';
 interface HeaderProps {
   bannerImage: string;
   altText?: string;
+  id?: string;
 }
 
 const Header: React.FC<HeaderProps> = ({ bannerImage, altText = 'Banner' }) => {
