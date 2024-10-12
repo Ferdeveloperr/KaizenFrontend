@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 
-
 interface NavbarProps {
   infoRef: React.RefObject<HTMLDivElement>;
   mainRef: React.RefObject<HTMLDivElement>;
@@ -9,7 +8,7 @@ interface NavbarProps {
   formContactRef: React.RefObject<HTMLDivElement>;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ infoRef, mainRef,  formContactRef }) => {
+const Navbar: React.FC<NavbarProps> = ({ infoRef, mainRef, formContactRef }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -69,8 +68,8 @@ const Navbar: React.FC<NavbarProps> = ({ infoRef, mainRef,  formContactRef }) =>
         </button>
       </div>
 
-      <div className={`absolute top-16 left-0 w-full bg-black text-center space-y-4 z-40 overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0'}`}>
-        <ul className="space-y-4">
+      <div className={`absolute top-16 left-0 w-full text-center space-y-4 z-40 overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0'} ${isScrolled ? 'bg-black bg-opacity-70' : 'bg-black'}`}>
+        <ul className="flex flex-col items-center space-y-4">
           <li>
             <button onClick={() => scrollToRef(infoRef)} className="text-white no-underline hover:text-red-600 transition duration-300 block py-2">Inicio</button>
           </li>
