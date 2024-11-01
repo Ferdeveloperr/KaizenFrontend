@@ -1,11 +1,11 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faYoutube, faTiktok } from '@fortawesome/free-brands-svg-icons';
-import { Link } from 'react-router-dom'; // Importa Link
-import { faChevronUp } from '@fortawesome/free-solid-svg-icons'; // Importa el icono de flecha
+import { Link } from 'react-router-dom'; 
+import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
 const Footer: React.FC = () => {
-  // Función para scroll a la parte superior
+ 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };

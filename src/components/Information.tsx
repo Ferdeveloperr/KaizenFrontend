@@ -10,13 +10,15 @@ const Information: React.FC = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    centerMode: true,
+    centerPadding: '0px',
   };
 
-  // Número de WhatsApp
+  
   const whatsappNumber = '1126629808';
-  // Mensaje predeterminado
+  
   const message = 'Hola, me gustaria agendar una admision!';
-  // URL de WhatsApp
+  
   const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
   return (
@@ -73,17 +75,19 @@ const Information: React.FC = () => {
           Contáctanos por WhatsApp
         </button>
       </a>
+      <div className=''>
       <Slider {...settings}>
         <div>
-          <img src="/path/to/image1.jpg" alt="Comentario 1" />
+          <img src="" alt="Comentario 1"  />
         </div>
         <div>
-          <img src="/path/to/image2.jpg" alt="Comentario 2" />
+          <img src="https://res.cloudinary.com/dzzec7hzl/image/upload/v1730422027/WhatsApp_Image_2024-10-31_at_9.45.55_PM_2_b7a8cf.jpg" alt="Comentario 2" className="w-full h-auto max-w-lg mx-auto" />
         </div>
         <div>
-          <img src="/path/to/image3.jpg" alt="Comentario 3" />
+          <img src="" alt="Comentario 3" />
         </div>
       </Slider>
+    </div>
     </div>
   );
 };
