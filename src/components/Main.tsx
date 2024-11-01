@@ -31,10 +31,12 @@ const Main: React.FC = () => {
             Ideal para quienes buscan comenzar con un entrenamiento estructurado y eficaz.
           </p>
           <ul className={`list-disc list-inside mb-4 text-black text-center ${expanded.activo ? '' : 'hidden'}`}>
-            <li>Rutinas de entrenamiento personalizadas entregadas cada mes.</li>
-            <li>Consultas vía WhatsApp: resolución de dudas con el entrenador, disponible de lunes a viernes.</li>
-            <li>Plan de alimentación básico para complementar tus entrenamientos.</li>
-            <li>Este plan te ofrece lo esencial para empezar a mejorar tu rendimiento físico desde la comodidad de tu hogar o gimnasio.</li>
+            <li>Adminision 100% bonificada</li>
+            <li>1 videollamada de seguimiento bonificada al renovar</li>
+            <li>Plan de entrenamiento personalizado.</li>
+            <li>Guia de nutricion básica</li>
+            <li>Acceso a la comunidad</li>
+            
           </ul>
           <button className="text-red-600 mb-4" onClick={() => toggleExpand('activo')}>
             {expanded.activo ? 'Ver menos' : 'Ver beneficios'}
@@ -52,16 +54,20 @@ const Main: React.FC = () => {
 
         <div className="bg-white shadow-md rounded-lg p-6 flex flex-col items-center">
           <h3 className="text-xl font-semibold mb-2 text-center">Plan Plus</h3>
-          <p className="text-black mb-4 text-center">
+          <h5 className='text-black font-semibold mb-2 text-center'>5 cupos disponibles</h5>
+          <p className="text-black mb-2 text-center">
             Perfecto para quienes desean un nivel adicional de personalización y seguimiento.
           </p>
           <ul className={`list-disc list-inside mb-4 text-black text-center ${expanded.plus ? '' : 'hidden'}`}>
-            <li>Rutinas de entrenamiento avanzadas actualizadas cada dos semanas, ajustadas a tu progreso.</li>
-            <li>Seguimiento de la rutina mediante sesiones grupales por Google Meet cada mes.</li>
-            <li>Consultas ilimitadas por WhatsApp: soporte directo con el entrenador, de lunes a viernes.</li>
-            <li>Plan de alimentación personalizado para cumplir con tus objetivos nutricionales.</li>
-            <li>Soporte técnico en caso de problemas con la rutina o acceso a los materiales.</li>
-            <li>El Plan Plus está diseñado para ofrecerte un acompañamiento más cercano y un enfoque más detallado en tu progreso.</li>
+            <li>Adminision 100% bonificada </li>
+            <li>Videollamada de seguimiento cada 15 dias</li>
+            <li>Consultas ilimitadas por WhatsApp: soporte directo con el entrenador</li>
+            <li>Guia de nutricion avanzado </li>
+            <li>Incluye 2 clases de HIT.</li>
+            <li>Incluye 2 clases de ABS</li>
+            <li>Soporte técnico prioritario</li>
+            <li>(2) Reajustes del plan de entrenamiento</li>
+            <li>Acceso a la comunidad</li>
           </ul>
           <button className="text-red-600 mb-4" onClick={() => toggleExpand('plus')}>
             {expanded.plus ? 'Ver menos' : 'Ver beneficios'}
@@ -77,7 +83,7 @@ const Main: React.FC = () => {
         </div>
        
        
-        <div className="bg-white shadow-md rounded-lg p-6 flex flex-col items-center">
+        <div className="relative bg-white shadow-md rounded-lg p-6 flex flex-col items-center">
           <h3 className="text-xl font-semibold mb-2 text-center">Plan Pro</h3>
           <p className="text-black mb-4 text-center">
             Para quienes buscan un entrenamiento de nivel profesional con el máximo de beneficios.
@@ -102,7 +108,13 @@ const Main: React.FC = () => {
               Lo quiero!
             </button>
           </div>
+
+          
+          <div className="absolute inset-0 bg-black bg-opacity-80 flex items-center justify-center rounded-lg">
+            <span className="text-red-500 text-3xl  font-semibold">Próximamente</span>
+          </div>
         </div>
+
         
       </div>
     </main>
