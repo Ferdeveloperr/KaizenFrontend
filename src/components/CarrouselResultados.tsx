@@ -32,7 +32,7 @@ const CarrouselResultados: React.FC = () => {
   };
 
   return (
-    <div className="carrousel-container mx-auto mt-10 max-w-lg w-auto bg-white border-4 border-cream rounded-lg p-6 shadow-2xl">
+    <div className="carrousel-container mx-auto mt-10 max-w-2xl w-auto bg-white border-4 border-cream rounded-lg p-6 shadow-2xl">
       <h2 className="text-3xl font-bold text-center mb-6 text-black">
         Resultados de nuestros socios
       </h2>

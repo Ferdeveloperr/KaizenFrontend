@@ -44,7 +44,7 @@ const FormContact: React.FC = () => {
   };
 
   return (
-    <div className="bg-gradient-to-r from-gray-100 to-white shadow-lg rounded-lg p-8 max-w-md mx-auto mt-10 transition transform hover:scale-105 duration-300">
+    <div className="bg-gradient-to-r text-center from-gray-100 to-white shadow-lg rounded-lg p-8 max-w-2xl mx-auto mt-10 transition transform hover:scale-105 duration-300">
       <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">Contacto</h2>
       <form ref={form} onSubmit={sendEmail} className="space-y-6">
         <div>
