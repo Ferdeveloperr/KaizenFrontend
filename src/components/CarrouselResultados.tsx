@@ -7,11 +7,11 @@ const CarrouselResultados: React.FC = () => {
   const imagenesResultados = [
     {
       src: "https://res.cloudinary.com/dzzec7hzl/image/upload/v1728761710/WhatsApp_Image_2024-10-12_at_4.32.01_PM_kfuos8.jpg",
-      alt: "Gustavo quería empezar a entrenar pero no tenía tiempo por su trabajo, pero logró bajar 40 kilos gracias a la rutina que le adapté.",
+      alt: "Gustavo quería empezar a entrenar pero no tenía tiempo por su trabajo, pero logró bajar +20 kilos gracias a la rutina que le adapté.",
     },
     {
       src: "https://res.cloudinary.com/dzzec7hzl/image/upload/v1728761710/WhatsApp_Image_2024-10-12_at_4.32.02_PM_cx7dza.jpg",
-      alt: "Leonel es mi hermano, empezó a entrenar conmigo y hoy en día logró bajar 40 kilos.",
+      alt: "Leonel es mi hermano, empezó a entrenar conmigo y hoy en día logró bajar +30 kilos con esfuerzo y compromiso.",
     },
     {
       src: "https://res.cloudinary.com/dzzec7hzl/image/upload/v1728761710/WhatsApp_Image_2024-10-12_at_4.32.03_PM_ucrcc6.jpg",
@@ -22,7 +22,7 @@ const CarrouselResultados: React.FC = () => {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 500,
+    speed: 1500,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
@@ -33,9 +33,10 @@ const CarrouselResultados: React.FC = () => {
 
   return (
     <div className="carrousel-container mx-auto mt-10 max-w-2xl w-auto bg-white border-4 border-cream rounded-lg p-6 shadow-2xl">
-      <h2 className="text-3xl font-bold text-center mb-6 text-black">
-        Resultados de nuestros socios
+      <h2 className="text-4xl font-extrabold text-center mb-6 text-black tracking-tight drop-shadow-lg">
+        Historias de Éxito de Nuestros Socios
       </h2>
+
       <Slider {...settings}>
         {imagenesResultados.map((imagen, index) => (
           <div key={index} className="px-4">

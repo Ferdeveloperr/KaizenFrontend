@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
 
         <div className="mb-6 md:mb-0 text-center md:text-left">
           <h2 className="text-lg font-bold mb-2 mt-2">Enlaces</h2>
-          <Link to="/terminos" className="hover:text-red-600 transition duration-300">Términos y Condiciones</Link>
+          <Link to="/terminos" target="_blank" className="hover:text-red-600 transition duration-300">Términos y Condiciones</Link>
         </div>
       </div>
 

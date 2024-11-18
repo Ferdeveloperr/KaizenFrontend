@@ -13,29 +13,40 @@ const Main: React.FC = () => {
 
   const openWhatsApp = (message: string) => {
     const encodedMessage = encodeURIComponent(message);
-    const phoneNumber = '5491126629808'; 
+    const phoneNumber = '5491164813469'; 
     const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
     window.open(url, '_blank');
   };
 
   return (
+
     <main className="p-6 font-roboto">
-      <h2 className="text-2xl font-bold mb-4 text-center">Nuestros Servicios</h2>
-      <h3 className="text-1xl font-semibold mb-4 text-center">Aqui podras ver los beneficios de cada uno de nuestros planes</h3>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        
-        
+      <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-center text-gray-900 tracking-tight drop-shadow-lg">
+        Nuestros Servicios
+      </h2>
+      <h3 className="text-xl md:text-2xl font-medium mb-6 text-center text-gray-700 tracking-normal drop-shadow-md">
+        Aquí podrás ver los beneficios de cada uno de nuestros planes
+      </h3>
+
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">   
+
         <div className="bg-white shadow-md rounded-lg p-6 flex flex-col items-center">
           <h3 className="text-xl font-semibold mb-2 text-center">Plan Activo</h3>
-          <p className="text-black mb-4 text-center">
-            Ideal para quienes buscan comenzar con un entrenamiento estructurado y eficaz.
+          <h5 className='text-red-600 font-semibold mb-4 text-center'>
+            ¡Los primeros 5 en anotarse obtienen un 50% de descuento!
+          </h5>
+
+          <p className="text-black mb-6 text-center">
+            Ideal para quienes buscan un entrenamiento estructurado y eficaz Full body.
           </p>
           <ul className={`list-disc list-inside mb-4 text-black text-center ${expanded.activo ? '' : 'hidden'}`}>
-            <li>Adminision 100% bonificada</li>
-            <li>1 videollamada de seguimiento bonificada al renovar</li>
-            <li>Plan de entrenamiento personalizado.</li>
-            <li>Guia de nutricion básica</li>
-            <li>Acceso a la comunidad</li>
+            <li>Seguimiento desde el primer Día</li>
+            <li>Entrenamiento de 1 hora</li>
+            <li>Enfocado en Aumento de Masa Muscular y pérdida de peso</li>
+            <li>3 bloques de Movilidad articular</li>
+            <li>3 bloques de Entrada en calor distintas</li>
+            <li>2 Bloques de Abdominales</li>
             
           </ul>
           <button className="text-red-600 mb-4" onClick={() => toggleExpand('activo')}>
@@ -53,20 +64,21 @@ const Main: React.FC = () => {
        
 
         <div className="bg-white shadow-md rounded-lg p-6 flex flex-col items-center">
-          <h3 className="text-xl font-semibold mb-2 text-center">Plan Plus</h3>
-          <h5 className='text-black font-semibold mb-2 text-center'>5 cupos disponibles</h5>
-          <p className="text-black mb-2 text-center">
+          <h3 className="text-xl font-semibold  text-center">Plan Plus</h3>
+          <h4 className='text-black font-semibold text-center'>Solo 5 cupos disponibles</h4>
+          <h5 className='text-red-600 font-semibold mb-4 text-center'>
+            ¡Los primeros 3 en anotarse obtienen un 50% de descuento!
+          </h5>
+          <p className="text-black mb-6 text-center">
             Perfecto para quienes desean un nivel adicional de personalización y seguimiento.
           </p>
           <ul className={`list-disc list-inside mb-4 text-black text-center ${expanded.plus ? '' : 'hidden'}`}>
-            <li>Adminision 100% bonificada </li>
+            <li className='font-semibold text-green-500'>Todos los beneficios del Plan Activo </li>
+            <li>Adminision para definir objetivos </li>
             <li>Videollamada de seguimiento cada 15 dias</li>
+            <li>(1) Reajuste del plan de entrenamiento</li>
+            <li>Incluye 2 bloques de HIT.</li>
             <li>Consultas ilimitadas por WhatsApp: soporte directo con el entrenador</li>
-            <li>Guia de nutricion avanzado </li>
-            <li>Incluye 2 clases de HIT.</li>
-            <li>Incluye 2 clases de ABS</li>
-            <li>Soporte técnico prioritario</li>
-            <li>(2) Reajustes del plan de entrenamiento</li>
             <li>Acceso a la comunidad</li>
           </ul>
           <button className="text-red-600 mb-4" onClick={() => toggleExpand('plus')}>
