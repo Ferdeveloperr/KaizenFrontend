@@ -10,7 +10,7 @@ const Faq: React.FC = () => {
   };
 
   return (
-    <div className="max-w-3xl mx-auto p-6 font-nunito">
+      <div className="max-w-6xl mx-auto p-6 lg:px-16 font-nunito">
       <h2 className="text-3xl md:text-4xl font-extrabold text-center text-gray-900 tracking-tight drop-shadow-lg mb-6">
         Preguntas Frecuentes
       </h2>
