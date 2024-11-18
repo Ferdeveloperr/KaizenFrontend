@@ -26,7 +26,7 @@ const Information: React.FC = () => {
   const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
   return (
-    <div className="bg-white shadow-md rounded-lg p-8 max-w-4xl mx-auto mt-10">
+    <div className="bg-white shadow-md rounded-lg p-8 w-full max-w-screen-xl mx-auto mt-10">
       <h1 className="text-4xl md:text-5xl font-extrabold text-center text-gray-900 tracking-tight drop-shadow-lg mb-4">
         Entrenamiento Personalizado Online
       </h1>
