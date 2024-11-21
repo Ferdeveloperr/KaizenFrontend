@@ -15,7 +15,13 @@ const Footer: React.FC = () => {
       <div className="container mx-auto flex flex-col md:flex-row justify-around items-center px-4">
         <div className="mb-6 md:mb-0 text-center md:text-left">
           <h2 className="text-lg font-bold mb-2">Contáctanos</h2>
-          <p className="mb-1">Email: <a href="mailto:jorgelegui_894@hotmail.com" className="underline hover:text-red-600 transition duration-300">jorgelegui_894@hotmail.com</a></p>
+          <p className="mb-1">Email: 
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=contacto@kaizenkzfitness.com" 
+            target="_blank" 
+            className="underline hover:text-red-600 transition duration-300">
+            contacto@kaizenkzfitness.com
+            </a>
+          </p>
         </div>
         
         <div className="mb-6 md:mb-0 text-center">
