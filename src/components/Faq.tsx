@@ -10,16 +10,16 @@ const Faq: React.FC = () => {
   };
 
   return (
-      <div className="max-w-6xl mx-auto p-6 lg:px-16 font-nunito">
+    <div className="max-w-6xl mx-auto p-6 lg:px-16 font-nunito">
       <h2 className="text-3xl md:text-4xl font-extrabold text-center text-gray-900 tracking-tight drop-shadow-lg mb-6">
         Preguntas Frecuentes
       </h2>
 
       <div className="space-y-4">
-        
+        {/* Pregunta 1 */}
         <div className="bg-white p-4 rounded-lg shadow-md">
-          <div 
-            className="flex justify-between items-center cursor-pointer" 
+          <div
+            className="flex justify-between items-center cursor-pointer"
             onClick={() => toggleQuestion(0)}
           >
             <h3 className="text-lg font-semibold">¿Cómo funciona el plan de entrenamiento?</h3>
@@ -32,27 +32,27 @@ const Faq: React.FC = () => {
           )}
         </div>
 
-        
+        {/* Pregunta 2 */}
         <div className="bg-white p-4 rounded-lg shadow-md">
-          <div 
-            className="flex justify-between items-center cursor-pointer" 
+          <div
+            className="flex justify-between items-center cursor-pointer"
             onClick={() => toggleQuestion(1)}
           >
-            <h3 className="text-lg font-semibold">¿Como funciona el seguimiento desde el primer dia?</h3>
+            <h3 className="text-lg font-semibold">¿Cómo funciona el seguimiento desde el primer día?</h3>
             <FontAwesomeIcon icon={openQuestion === 1 ? faChevronUp : faChevronDown} />
           </div>
           {openQuestion === 1 && (
             <p className="mt-4 text-gray-700">
               Iremos siguiendo tu progreso en el entrenamiento y te proporcionaremos feedback constantemente para que puedas mejorar tu rendimiento y alcanzar tus objetivos.
-              Dependiendo el plan que elijas tendras un seguimiento por wsp o a través de videollamadas con el entrenador.
+              Dependiendo del plan que elijas, tendrás un seguimiento por WhatsApp o a través de videollamadas con el entrenador.
             </p>
           )}
         </div>
 
-        
+        {/* Pregunta 3 */}
         <div className="bg-white p-4 rounded-lg shadow-md">
-          <div 
-            className="flex justify-between items-center cursor-pointer" 
+          <div
+            className="flex justify-between items-center cursor-pointer"
             onClick={() => toggleQuestion(2)}
           >
             <h3 className="text-lg font-semibold">¿Cuántas veces puedo consultar al entrenador?</h3>
@@ -60,15 +60,15 @@ const Faq: React.FC = () => {
           </div>
           {openQuestion === 2 && (
             <p className="mt-4 text-gray-700">
-              Dependiendo del plan que elijas, puedes tener acceso ilimitado a consultas con el entrenador vía WhatsApp, o también consultas mas exclusivas por videollamadas en el caso del Plan Plus.
+              Dependiendo del plan que elijas, puedes tener acceso ilimitado a consultas con el entrenador vía WhatsApp, o también consultas más exclusivas por videollamadas en el caso del Plan Plus.
             </p>
           )}
         </div>
 
-       
+        {/* Pregunta 4 */}
         <div className="bg-white p-4 rounded-lg shadow-md">
-          <div 
-            className="flex justify-between items-center cursor-pointer" 
+          <div
+            className="flex justify-between items-center cursor-pointer"
             onClick={() => toggleQuestion(3)}
           >
             <h3 className="text-lg font-semibold">¿Puedo cambiar de plan después de haberme suscrito?</h3>
@@ -80,22 +80,23 @@ const Faq: React.FC = () => {
             </p>
           )}
         </div>
-      </div>
 
-      <div className="bg-white p-4 rounded-lg shadow-md">
-          <div 
-            className="flex justify-between items-center cursor-pointer" 
-            onClick={() => toggleQuestion(2)}
+        {/* Pregunta 5 */}
+        <div className="bg-white p-4 rounded-lg shadow-md">
+          <div
+            className="flex justify-between items-center cursor-pointer"
+            onClick={() => toggleQuestion(4)}
           >
             <h3 className="text-lg font-semibold">¿Aceptan todos los medios de pago?</h3>
-            <FontAwesomeIcon icon={openQuestion === 2 ? faChevronUp : faChevronDown} />
+            <FontAwesomeIcon icon={openQuestion === 4 ? faChevronUp : faChevronDown} />
           </div>
-          {openQuestion === 2 && (
+          {openQuestion === 4 && (
             <p className="mt-4 text-gray-700">
-              Si, aceptamos todos los medios de pago. Puedes pagar con tarjeta de crédito, debito o transferencia desde tu celular.
+              Sí, aceptamos todos los medios de pago. Puedes pagar con tarjeta de crédito, débito o transferencia desde tu celular.
             </p>
           )}
         </div>
+      </div>
     </div>
   );
 };
