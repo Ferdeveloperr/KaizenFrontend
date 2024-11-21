@@ -45,7 +45,7 @@ const Main: React.FC = () => {
             <li>Entrenamiento de 1 hora</li>
             <li>Enfocado en Aumento de Masa Muscular y pérdida de peso</li>
             <li>3 bloques de Movilidad articular</li>
-            <li>3 bloques de Entrada en calor distintas</li>
+            <li>1 bloques de Entrada en calor distintas</li>
             <li>2 Bloques de Abdominales</li>
             
           </ul>

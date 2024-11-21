@@ -105,7 +105,7 @@ const Information: React.FC = () => {
           <img src="https://res.cloudinary.com/dzzec7hzl/image/upload/v1731969401/modificacion_testimonio_uno_cg2zmo.jpg" alt="Comentario 1" className="w-full h-auto max-w-lg mx-auto rounded-lg shadow-lg" />
         </div>
         <div>
-          <img src="https://res.cloudinary.com/dzzec7hzl/image/upload/v1730422027/WhatsApp_Image_2024-10-31_at_9.45.55_PM_2_b7a8cf.jpg" alt="Comentario 2" className="w-full h-auto max-w-lg mx-auto rounded-lg shadow-lg" />
+          <img src="https://res.cloudinary.com/dzzec7hzl/image/upload/v1732200313/testiariel_hzlwge.jpg" alt="Comentario 2" className="w-full h-auto max-w-lg mx-auto rounded-lg shadow-lg" />
         </div>
         <div>
           <img src="https://res.cloudinary.com/dzzec7hzl/image/upload/v1731969399/modificacion_testimonio_dos_chujxw.jpg" alt="Comentario 3" className="w-full h-auto max-w-lg mx-auto rounded-lg shadow-lg" />
